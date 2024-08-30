@@ -1,0 +1,413 @@
+/* Styles de base */
+
+:root {
+    --primary-color: #30323D;
+    --secondary-color: #4D5061;
+    --accent-color: #FF686B;
+    --highlight-color: #9FCC2E;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-left: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+nav a button:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 5%;
+}
+
+/* Recherche */
+#searchBar {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#searchBar input {
+    width: 100%;
+    padding: 1rem 2.5rem 1rem 1rem;
+    border: 2px solid var(--secondary-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    height: 40px;
+}
+
+#searchBar i {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+/* Filtres */
+#filterBar {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+#filterBar select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+}
+
+/* Curseur du filtre du budget */
+#budgetFilter {
+    position: relative;
+}
+
+#budgetFilter input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: var(--secondary-color);
+    border-radius: 5px;
+    outline: none;
+    margin-top: 0.5rem;
+}
+
+#budgetFilter input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--highlight-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Missions */
+.mission {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+.mission:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mission h3 {
+    color: var(--secondary-color);
+    margin-top: 0;
+}
+
+.mission p {
+    margin: 0.5rem 0;
+}
+
+.keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.keyword {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.budget {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.date {
+    color: var(--highlight-color);
+}
+
+.mission-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.mission-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.apply-button {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+.details-button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.apply-button:hover, .details-button:hover {
+    opacity: 0.9;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Formulaires */
+form {
+    background-color: white;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="date"]:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+form button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form .apply-button {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+form .apply-button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+form .details-button {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+form .details-button:hover {
+    background-color: var(--highlight-color);
+    color: var(--primary-color);
+}
+
+/* Boutons de jeu vidéo */
+nav a button,
+form button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a button:hover,
+form button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+/* Responsiveness */
+
+/* Écrans de moins de 1024px */
+@media (max-width: 1024px) {
+    header {
+        padding: 1rem 2%;
+    }
+
+    main {
+        padding: 0 2%;
+    }
+
+    #searchBar {
+        max-width: 100%;
+    }
+
+    #filterBar {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #filterBar select {
+        width: 100%;
+    }
+}
+
+/* Écrans de moins de 768px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
+    nav a button {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    #searchBar input {
+        padding: 1rem 2.5rem;
+        font-size: 0.9rem;
+    }
+
+    .mission {
+        padding: 1rem;
+    }
+
+    .mission-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .mission-buttons button {
+        width: 100%;
+    }
+
+    form {
+        padding: 1.5rem;
+        margin: 1.5rem auto;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="date"] {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+
+    form button {
+        width: 100%;
+        padding: 0.6rem;
+    }
+}
+
+/* Écrans de moins de 480px */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    #searchBar input {
+        font-size: 0.8rem;
+    }
+
+    .mission {
+        padding: 0.8rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"],
+    form input[type="date"] {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    form button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster une Mission - Antigon</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Antigon</a>
+        <nav>
+            <a href="post-mission.html"><button id="postMission">Poster une mission</button></a>
+            <a href="login.html"><button id="login">Se connecter</button></a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Dépose ta mission pour attirer les talents !</h1>
+        <form id="postMissionForm">
+            <label for="title">Titre de la mission</label>
+            <input type="text" id="title" placeholder="Par exemple : Création d'un logo pour startup" required>
+            <label for="company">Entreprise</label>
+            <input type="text" id="company" placeholder="Nom de l'entreprise" required>
+            <label for="budget">Budget</label>
+            <input type="text" id="budget" placeholder="Indique le budget (ex : 1500€)" required>
+            <label for="keywords">Mots-clés</label>
+            <input type="text" id="keywords" placeholder="Design, Photographie, Illustration..." required>
+            <label for="date">Date de publication</label>
+            <input type="date" id="date" required>
+            <button type="submit" class="apply-button">Poster la mission</button>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
